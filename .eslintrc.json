@@ -1,0 +1,43 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "worker": true,
+        "serviceworker": true
+    },
+    "extends": [
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "rules": {
+        "linebreak-style": 0,
+        "no-restricted-syntax": [
+            "error",
+            "LabeledStatement",
+            "WithStatement"
+        ],
+        "no-param-reassign": 0,
+        "no-unused-vars": 0,
+        "no-underscore-dangle": [
+            "error", 
+            { "allowAfterThis": true }
+        ],
+        "max-len": [
+            "error", 
+            {"code": 300}
+        ],
+        "treatUndefinedAsUnspecified": 0,
+        "no-restricted-globals": 0
+    },
+    "overrides": [
+        {
+            "files": ["*.worker.js"],
+            "rules": {
+                "no-restricted-globals": 0
+            }
+        }
+    ]
+}
